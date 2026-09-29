@@ -1,0 +1,203 @@
+/* Astra Rooftop menu — brand tokens taken from the printed menus:
+   navy #1d3251, warm gray #5e615d, white paper, star watermark, thin double frame. */
+:root {
+  --navy: #1d3251;
+  --navy-soft: #3a4f70;
+  --gray: #5e615d;
+  --gray-2: #8b8e89;
+  --line: #d3d8e0;
+  --line-2: #eceef2;
+  --paper: #ffffff;
+  --paper-2: #f8f7f4;
+  --display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --serif: "EB Garamond", Georgia, "Times New Roman", serif;
+  --sans: "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --gutter: 16px;
+  --maxw: 1100px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; color-scheme: light; }
+body {
+  margin: 0; background: var(--paper); color: var(--navy);
+  font-family: var(--serif); font-size: 17px; line-height: 1.4;
+  -webkit-font-smoothing: antialiased; min-height: 100vh;
+}
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background: url("../assets/astra-star.png") center 44% / min(80vw, 560px) no-repeat;
+  opacity: .055;
+}
+.page { position: relative; z-index: 1; max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+a { color: inherit; }
+body.no-scroll { overflow: hidden; }
+
+/* ---------- header ---------- */
+.site-head { text-align: center; padding: 26px 0 8px; }
+.brand { display: inline-block; }
+.brand img { width: min(210px, 56vw); height: auto; display: block; margin: 0 auto; }
+.tagline {
+  margin: 8px 0 0; font-family: var(--display); font-weight: 600; font-size: 13px;
+  letter-spacing: .24em; text-transform: uppercase; color: var(--gray);
+}
+
+/* ---------- menu buttons (sticky) ---------- */
+.tabs-wrap {
+  position: sticky; top: 0; z-index: 20;
+  margin: 10px calc(-1 * var(--gutter)) 0; padding: 10px var(--gutter);
+  background: rgba(255, 255, 255, .94);
+  -webkit-backdrop-filter: saturate(1.2) blur(8px); backdrop-filter: saturate(1.2) blur(8px);
+  border-bottom: 1px solid var(--line-2);
+}
+.tabs {
+  display: flex; gap: 8px; padding: 2px;
+  overflow-x: auto; scroll-snap-type: x proximity;
+  scrollbar-width: none; -ms-overflow-style: none;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  flex: none; scroll-snap-align: center; appearance: none; -webkit-appearance: none;
+  border: 1px solid var(--navy); background: #fff; color: var(--navy);
+  font-family: var(--sans); font-weight: 500; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase;
+  padding: 10px 16px; border-radius: 999px; cursor: pointer; white-space: nowrap;
+  transition: background .15s, color .15s;
+}
+.tab:hover { background: var(--paper-2); }
+.tab.active { background: var(--navy); color: #fff; }
+.tab:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
+@media (min-width: 900px) {
+  .tabs { justify-content: center; flex-wrap: wrap; overflow: visible; }
+}
+
+/* ---------- a menu ---------- */
+.menus { padding: 4px 0 28px; }
+.menu[hidden] { display: none; }
+.menu-hero { display: block; width: 100%; max-height: 340px; object-fit: cover; border-radius: 8px; margin-top: 18px; }
+.menu-head { text-align: center; padding: 26px 0 6px; }
+.menu-title {
+  margin: 0; font-family: var(--display); font-weight: 500; line-height: 1.05;
+  font-size: clamp(34px, 6vw, 54px); letter-spacing: .14em; text-transform: uppercase; color: var(--gray);
+}
+.menu-subtitle {
+  margin: 6px 0 0; font-family: var(--display); font-weight: 600;
+  font-size: clamp(20px, 3.4vw, 28px); letter-spacing: .1em; text-transform: uppercase;
+}
+.menu-note { margin: 10px auto 0; max-width: 60ch; font-style: italic; font-weight: 600; }
+
+.cats { margin-top: 6px; }
+@media (min-width: 800px) {
+  .cats { columns: 2; column-gap: 56px; }
+  .cats.one-col { columns: 1; max-width: 680px; margin-inline: auto; }
+}
+.cat { margin: 22px 0 6px; break-inside: avoid-column; -webkit-column-break-inside: avoid; }
+.cat-title {
+  margin: 0 0 6px; font-family: var(--display); font-weight: 700; line-height: 1.1;
+  font-size: 26px; letter-spacing: .1em; text-transform: uppercase; color: var(--navy);
+  padding-bottom: 6px; border-bottom: 1px solid var(--line);
+}
+.cat-note {
+  margin: 0 0 6px; font-family: var(--sans); font-size: 11px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--gray-2);
+}
+.cat-foot { margin: 12px 0 0; font-style: italic; color: var(--gray); font-size: 15px; }
+
+.items { list-style: none; margin: 0; padding: 0; }
+.item { display: flex; gap: 12px; padding: 9px 0; break-inside: avoid; }
+.item + .item { border-top: 1px solid var(--line-2); }
+.item-body { flex: 1; min-width: 0; }
+.item-line { display: flex; align-items: baseline; gap: 8px; }
+.item-name { font-weight: 600; font-size: 18px; color: var(--navy); }
+.item-sub { font-style: italic; font-weight: 400; font-size: 14.5px; color: var(--gray); }
+.leader { flex: 1; min-width: 14px; border-bottom: 1px dotted var(--line); transform: translateY(-4px); }
+.item-price { font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums; text-align: right; }
+.item-desc { margin: 2px 0 0; font-style: italic; color: var(--gray); font-size: 15.5px; line-height: 1.35; }
+sup.raw { font-size: .7em; margin-left: 1px; line-height: 0; }
+
+/* framed items (the boxed dishes on the printed menus) */
+.item.featured {
+  border: 1px solid var(--navy); outline: 1px solid var(--navy); outline-offset: 3px;
+  padding: 12px 14px; margin: 14px 4px 10px; text-align: center; display: block;
+}
+.item.featured .item-line { justify-content: center; flex-wrap: wrap; }
+.item.featured .item-price { white-space: normal; }
+.item.featured .leader { display: none; }
+.item.featured .item-price::before, .cat.boxed .item-price::before { content: "– "; font-weight: 400; color: var(--gray-2); }
+.item.featured .item-img { margin: 0 auto 8px; }
+.item.featured + .item { border-top: 0; }
+
+/* photos */
+.item-img {
+  flex: none; width: 72px; height: 72px; padding: 0; border: 0; background: var(--paper-2);
+  border-radius: 8px; overflow: hidden; cursor: zoom-in; display: block;
+}
+.item-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (min-width: 800px) { .item-img { width: 88px; height: 88px; } }
+
+/* flavour chips */
+.chips { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  border: 1px solid var(--line); border-radius: 999px; padding: 7px 13px;
+  font-family: var(--sans); font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase;
+}
+
+/* framed section (Weekly Features, Hookah Happy Hour) */
+.cat.boxed {
+  border: 1px solid var(--navy); outline: 1px solid var(--navy); outline-offset: 3px;
+  padding: 16px 18px 14px; margin: 28px 4px 12px; text-align: center;
+}
+.cat.boxed .cat-title { font-size: 30px; border-bottom: 0; padding-bottom: 0; }
+.cat.boxed .cat-note { margin-top: -2px; }
+.cat.boxed .item { display: block; padding: 10px 0; }
+.cat.boxed .item-line { justify-content: center; flex-wrap: wrap; column-gap: 12px; }
+.cat.boxed .leader { display: none; }
+.cat.boxed .item-name {
+  font-family: var(--display); font-weight: 600; font-size: 21px; letter-spacing: .08em; text-transform: uppercase;
+}
+.cat.boxed .item-desc { font-size: 15px; }
+
+/* story + footers */
+.story { margin: 26px auto 0; max-width: 70ch; border-top: 1px solid var(--line-2); padding-top: 14px; }
+.story summary {
+  cursor: pointer; list-style: none; text-align: center;
+  font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: .1em; text-transform: uppercase;
+}
+.story summary::-webkit-details-marker { display: none; }
+.story summary::after { content: " +"; color: var(--gray-2); }
+.story[open] summary::after { content: " –"; }
+.story p { color: var(--gray); text-align: center; }
+.menu-actions { text-align: center; margin: 22px 0 0; }
+.pdf-link { font-family: var(--sans); font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--gray); }
+
+.site-foot { border-top: 1px solid var(--line-2); padding: 26px 0 40px; text-align: center; color: var(--gray); font-size: 14.5px; }
+.thanks {
+  margin: 0 0 8px; font-family: var(--display); font-weight: 600; font-size: 22px;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--navy);
+}
+.site-foot p { margin: 4px 0; }
+.site-foot a { color: var(--navy); text-decoration: none; }
+.site-foot a:hover { text-decoration: underline; }
+.disclaimer { max-width: 80ch; margin: 14px auto 0 !important; font-size: 12.5px; }
+.noscript { text-align: center; padding: 20px; }
+
+/* lightbox */
+.lightbox {
+  position: fixed; inset: 0; z-index: 50; background: rgba(29, 50, 81, .92);
+  display: flex; align-items: center; justify-content: center; padding: 20px; cursor: zoom-out;
+}
+.lightbox[hidden] { display: none; }
+.lightbox img { max-width: 100%; max-height: 100%; border-radius: 8px; box-shadow: 0 20px 60px rgba(0, 0, 0, .4); }
+
+/* the printed menus' double frame, on larger screens */
+@media (min-width: 800px) {
+  .page {
+    margin: 22px auto; padding: 0 40px 12px;
+    border: 1px solid var(--navy); outline: 1px solid var(--navy); outline-offset: 5px;
+    background: rgba(255, 255, 255, .55);
+  }
+  .tabs-wrap { margin: 10px -40px 0; padding: 12px 40px; }
+}
+
+@media print {
+  body::before, .tabs-wrap, .pdf-link, .lightbox { display: none !important; }
+  .menu[hidden] { display: block !important; break-before: page; }
+  .page { border: 0; outline: 0; }
+}
