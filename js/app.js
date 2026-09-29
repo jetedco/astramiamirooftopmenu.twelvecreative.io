@@ -20,7 +20,7 @@
     if (typeof it === "string") return '<li class="chip">' + esc(it) + "</li>";
     var img = it.img
       ? '<button class="item-img" type="button" data-full="' + esc(it.img) + '" aria-label="View photo of ' + esc(it.name) + '">' +
-        '<img src="' + esc(it.img) + '" alt="' + esc(it.name) + '" loading="lazy"></button>'
+        '<img src="' + esc(it.thumb || it.img) + '" alt="' + esc(it.name) + '" loading="lazy" width="600" height="600"></button>'
       : "";
     var sub = it.sub ? ' <span class="item-sub">' + esc(it.sub) + "</span>" : "";
     var price = it.price ? '<span class="leader" aria-hidden="true"></span><span class="item-price">' + esc(it.price) + "</span>" : "";

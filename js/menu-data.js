@@ -36,12 +36,12 @@ window.ASTRA_MENUS = [
         { name: "Sashimi*", price: "$26", desc: "Salmon, tuna, soy sauce, jalapeños" },
         { name: "Wild Caught Salmon Tartare*", price: "$22", desc: "Fresh salmon, mango, lemon, lime, avocado" },
         { name: "Oktapodi Sharas", price: "$26", desc: "Mediterranean grilled octopus, onions, capers, lemon" },
-        { name: "Ceviche*", price: "$26", desc: "Fresh fish, coconut milk, white corn, sweet chili juice" },
+        { name: "Ceviche*", price: "$26", desc: "Fresh fish, coconut milk, white corn, sweet chili juice", img: "images/ceviche.jpg", thumb: "images/ceviche-thumb.jpg" },
         { name: "Garides Stin Sxara", price: "$28", desc: "5 grilled black tiger shrimp, cilantro lemon oil" },
         { name: "Calamarakia", price: "$22", desc: "Crispy fried calamari, lemon aioli, parsley oil" },
-        { name: "Cheese Saganaki", price: "$22", desc: "Pan fried kefalograviera cheese, grilled country bread, tableside flambé with ouzo" },
+        { name: "Cheese Saganaki", price: "$22", desc: "Pan fried kefalograviera cheese, grilled country bread, tableside flambé with ouzo", img: "images/cheese-saganaki.jpg", thumb: "images/cheese-saganaki-thumb.jpg" },
         { name: "Spanakopita", price: "$20", desc: "Greek spinach pie, feta" },
-        { name: "Pikilia Spread", price: "Three $24 / Five $34", desc: "Choice of hummus, melitzanosalata, spicy feta, tzatziki, taramosalata, pita bread" },
+        { name: "Pikilia Spread", price: "Three $24 / Five $34", desc: "Choice of hummus, melitzanosalata, spicy feta, tzatziki, taramosalata, pita bread", img: "images/pikilia-spread.jpg", thumb: "images/pikilia-spread-thumb.jpg" },
         { name: "Saganaki with Sesame & Honey", price: "$22", desc: "Crispy sesame, crusted feta, Cretan thyme honey" },
         { name: "Astra Chips", price: "$22", desc: "Crispy zucchini & eggplant chips, tzatziki sauce" },
         { name: "Lamb Meatballs", price: "$20", desc: "Colorado ground lamb, parsley, oregano, tzatziki sauce" },
@@ -110,8 +110,8 @@ window.ASTRA_MENUS = [
         { name: "Meatball Pasta", price: "$26", desc: "Linguine, house-made marinara, heirloom cherry tomatoes, Parmesan cheese, feta cheese topping" },
         { name: "Astra Special Mussels", price: "$24", desc: "Bruschetta, heirloom cherry tomatoes, feta cheese, olives, capers, sun-dried tomatoes, fresh garlic, green peppers" },
         { name: "Fried Red Snapper", price: "$44", desc: "Served with house salad and saffron rice" },
-        { name: "Lentil Salad", price: "$22", desc: "Citrus, fresh herbs, sundried tomatoes, orange vinaigrette" },
-        { name: "Stracciatella Salad", price: "$22", desc: "Infused strawberries, chili oil, spring onions, whipped honey" },
+        { name: "Lentil Salad", price: "$22", desc: "Citrus, fresh herbs, sundried tomatoes, orange vinaigrette", img: "images/lentil-salad.jpg", thumb: "images/lentil-salad-thumb.jpg" },
+        { name: "Stracciatella Salad", price: "$22", desc: "Infused strawberries, chili oil, spring onions, whipped honey", img: "images/stracciatella-salad.jpg", thumb: "images/stracciatella-salad-thumb.jpg" },
         { name: "Lamb Shank", price: "$44", desc: "Tri-color fingerling roasted potatoes and asparagus" },
         { name: "Porterhouse (32 oz.)", price: "$138", desc: "32 oz. Porterhouse steak (ideal for two) served with hand-cut fries", featured: true }
       ]}
@@ -200,7 +200,7 @@ window.ASTRA_MENUS = [
       { title: "Bar Bites", items: [
         { name: "Oysters (Each)*", price: "$2.25", desc: "Fresh lime, cocktail sauce" },
         { name: "Lamb Meatballs", price: "$12", desc: "Mini kebab meatballs, tzatziki" },
-        { name: "Pikilia Spread", price: "$12", desc: "Eggplant melitzanosalata, hummus, spicy feta, pita bread" },
+        { name: "Pikilia Spread", price: "$12", desc: "Eggplant melitzanosalata, hummus, spicy feta, pita bread", img: "images/pikilia-spread.jpg", thumb: "images/pikilia-spread-thumb.jpg" },
         { name: "Classic Greek Salad", price: "$12", desc: "Tomatoes, cucumber, green peppers, olives, red onions, Kalamata olives, feta cheese, virgin olive oil, romaine hearts lettuce" },
         { name: "Classic Caesar Salad", price: "$12", desc: "Romaine lettuce, Caesar dressing, Parmesan, croutons + applewood crispy bacon" },
         { name: "Chicken Kebab", price: "$14", desc: "Grilled chicken kebab skewer with BBQ sauce and saffron rice" },
@@ -370,11 +370,11 @@ window.ASTRA_MENUS = [
     id: "desserts", label: "Desserts", title: "Desserts", pdf: "menus/dessert-menu.pdf",
     sections: [
       { title: "Desserts", items: [
-        { name: "Baklava", price: "$16", desc: "Layers of warm dessert: phyllo dough filled with pistachios & vanilla ice cream" },
+        { name: "Baklava", price: "$16", desc: "Layers of warm dessert: phyllo dough filled with pistachios & vanilla ice cream", img: "images/baklava.jpg", thumb: "images/baklava-thumb.jpg" },
         { name: "Classic Tiramisu", price: "$14", desc: "Espresso coffee tiramisu" },
         { name: "Crème Brûlée", price: "$14", desc: "Classic baked cream aromatized with Madagascar vanilla beans" },
         { name: "Greek Yogurt", price: "$14", desc: "Authentic Greek yogurt with Crete thyme honey" },
-        { name: 'Chocolate "Lava" Cake', price: "$14", desc: "Served with vanilla ice cream" },
+        { name: 'Chocolate "Lava" Cake', price: "$14", desc: "Served with vanilla ice cream", img: "images/lava-cake.jpg", thumb: "images/lava-cake-thumb.jpg" },
         { name: "Ice Cream", price: "$12", desc: "2 scoops: choice of vanilla, pistachio, or chocolate", featured: true }
       ]},
       { title: "After Dinner Drinks", items: [

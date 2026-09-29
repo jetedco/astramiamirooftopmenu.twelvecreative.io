@@ -20,15 +20,27 @@ Each menu also has its own link, e.g. `…/#happy-hour`, `…/#wine`.
 
 ## Adding photos
 
-1. Save the photo in `images/` (square-ish, ~800×800 px, JPG, under ~300 KB is ideal).
-2. In `js/menu-data.js`, add `img: "images/the-file.jpg"` to that item:
+1. Run the helper on the original photo (any size, JPG/PNG/WebP). It writes a web-sized full photo
+   and a 600×600 square thumbnail cropped where the dish is:
 
-   ```js
-   { name: "Astra Burger (10 oz.)", price: "$28", desc: "…", img: "images/astra-burger.jpg" },
+   ```bash
+   python3 tools/photo.py ~/Downloads/astra-burger.jpg astra-burger --focus 0.5 0.6
    ```
 
-   The page shows a thumbnail next to the item; tapping it opens the full photo.
+   `--focus X Y` is where the dish sits (fractions of width/height, default centre);
+   `--zoom 0.8` crops tighter.
+2. In `js/menu-data.js`, add the two paths to that item:
+
+   ```js
+   { name: "Astra Burger (10 oz.)", price: "$28", desc: "…",
+     img: "images/astra-burger.jpg", thumb: "images/astra-burger-thumb.jpg" },
+   ```
+
+   The list shows the thumbnail; tapping it opens the full photo. `thumb` is optional (falls back to `img`).
    A menu can also have a banner photo at the top: `hero: "images/brunch-hero.jpg"` on the menu object.
+
+Photos in place: baklava, ceviche (food menu), cheese saganaki, lava cake, lentil salad, pikilia spread
+(food + happy hour), stracciatella salad.
 
 ## Editing the menu
 
