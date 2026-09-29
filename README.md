@@ -40,7 +40,8 @@ Each menu also has its own link, e.g. `…/#happy-hour`, `…/#wine`.
    A menu can also have a banner photo at the top: `hero: "images/brunch-hero.jpg"` on the menu object.
 
 Photos in place: baklava, ceviche (food menu), cheese saganaki, lava cake, lentil salad, pikilia spread
-(food + happy hour), stracciatella salad.
+(food + happy hour), stracciatella salad, Santorini Sunset (cocktails + brunch), Brizola, Paidakia, Horiatiki
+(food + brunch), Arugula & Gorgonzola, Mixed Grill, tiramisu. Banner on the Cocktails menu: `images/cocktails-hero.jpg`.
 
 ## Editing the menu
 

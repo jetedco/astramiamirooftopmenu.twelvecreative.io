@@ -49,10 +49,10 @@ window.ASTRA_MENUS = [
         { name: "Astra Tower", price: "$99", desc: "1 whole Maine lobster (1.25 to 1.5 lbs), 8 tiger shrimp, 8 oysters", featured: true }
       ]},
       { title: "Salates", items: [
-        { name: "Arugula & Gorgonzola", price: "$18", desc: "Baby arugula, Gorgonzola cheese, dry fruits, cherries, grapes, prunes, orange vinaigrette" },
+        { name: "Arugula & Gorgonzola", price: "$18", desc: "Baby arugula, Gorgonzola cheese, dry fruits, cherries, grapes, prunes, orange vinaigrette", img: "images/arugula-gorgonzola.jpg", thumb: "images/arugula-gorgonzola-thumb.jpg" },
         { name: "Little Gem Caesar Salad", price: "$16", desc: "Baby gem hearts, Caesar dressing, shaved Parmesan cheese, golden herb croutons" },
         { name: "Burrata", price: "$24", desc: "Fresh creamy burrata cheese, heirloom tomatoes, glazed balsamic vinaigrette" },
-        { name: "Horiatiki", price: "$22", desc: "Classic Greek salad, tomatoes, cucumbers, peppers, onions, olives, feta, extra virgin olive oil" },
+        { name: "Horiatiki", price: "$22", desc: "Classic Greek salad, tomatoes, cucumbers, peppers, onions, olives, feta, extra virgin olive oil", img: "images/horiatiki.jpg", thumb: "images/horiatiki-thumb.jpg" },
         { name: "Astra Salad", price: "$29", desc: "Tuna, baby lettuce, cherry tomatoes, green beans, boiled eggs, Kalamata olives, and Parmigiano Reggiano dressing", featured: true }
       ]},
       { title: "From the Sea", items: [
@@ -66,14 +66,14 @@ window.ASTRA_MENUS = [
       ]},
       { title: "From the Land", items: [
         { name: "Filet Mignon (8 oz.)", price: "$49", desc: "8 oz. charcoal grilled beef tenderloin, grilled asparagus, mushroom sauce" },
-        { name: "Brizola (12 oz.)", price: "$46", desc: "Charcoal grilled rib-eye steak, wild mushroom sauce, tzatziki sauce, hand cut fries" },
+        { name: "Brizola (12 oz.)", price: "$46", desc: "Charcoal grilled rib-eye steak, wild mushroom sauce, tzatziki sauce, hand cut fries", img: "images/brizola.jpg", thumb: "images/brizola-thumb.jpg" },
         { name: "Short Ribs (8 oz.)", price: "$48", desc: "Slow braised beef short ribs, orzo, tomato sauce" },
         { name: "NY Strip (12 oz.)", price: "$49", desc: "Center cut short loin, tzatziki sauce, hand cut fries" },
         { name: "Astra Burger (10 oz.)", price: "$28", desc: "Angus beef patty, caramelized onions, sharp cheddar cheese, lettuce, tomatoes, onions, hand cut fries" },
         { name: "Grilled Vegetarian Plate", price: "$28", desc: "Eggplant, zucchini, peppers, yellow squash, shiitake mushrooms, fava bean puree" },
-        { name: "Mixed Grill", price: "$48", desc: "3 skewers of marinated organic chicken, pita, lamb & beef kebab, hand cut fries, tzatziki sauce" },
+        { name: "Mixed Grill", price: "$48", desc: "3 skewers of marinated organic chicken, pita, lamb & beef kebab, hand cut fries, tzatziki sauce", img: "images/mixed-grill.jpg", thumb: "images/mixed-grill-thumb.jpg" },
         { name: "Kotopoulo", price: "$32", desc: "2 skewers of grilled marinated organic chicken, pita bread, tzatziki sauce" },
-        { name: "Paidakia", price: "$48", desc: "Charcoal grilled baby lamb chops, spinach and mint chimichurri sauce" },
+        { name: "Paidakia", price: "$48", desc: "Charcoal grilled baby lamb chops, spinach and mint chimichurri sauce", img: "images/paidakia.jpg", thumb: "images/paidakia-thumb.jpg" },
         { name: "Lamb Kebab", price: "$34", desc: "Colorado ground lamb, tzatziki sauce, tomatoes, onions, pita bread" },
         { name: "Steak Kebabs", price: "$36", desc: "Served with pita bread, tzatziki, and fries" }
       ]},
@@ -125,7 +125,7 @@ window.ASTRA_MENUS = [
       { title: "Appetizers", items: [
         { name: "Mama's Meatballs", price: "$16", desc: "Marinara sauce, pita bread, feta topping" },
         { name: "Spanakopita", price: "$18", desc: "Greek spinach pie, feta cheese" },
-        { name: "Horiatiki", price: "$16", desc: "Authentic Greek salad with tomatoes, red onions, green peppers, Kalamata olives, feta cheese" },
+        { name: "Horiatiki", price: "$16", desc: "Authentic Greek salad with tomatoes, red onions, green peppers, Kalamata olives, feta cheese", img: "images/horiatiki.jpg", thumb: "images/horiatiki-thumb.jpg" },
         { name: "Shrimp Saganaki", price: "$16", desc: "Grilled shrimp, tomato sauce, garlic, herbs, feta cheese" },
         { name: "Caesar Salad", price: "$14", desc: "Romaine lettuce, croutons, Parmesan flakes, applewood crispy bacon, Caesar dressing" },
         { name: "Astra Spread", price: "$14", desc: "Spicy feta, tzatziki, hummus" },
@@ -181,7 +181,7 @@ window.ASTRA_MENUS = [
         { name: "Astra Bloody Mary", price: "$16", desc: "Pegasus vodka, Amaras mezcal, bacon, guajillo chile, house Bloody Mary mix" },
         { name: "Lili-Koi Spice", price: "$18", desc: "Jalapeño chili-infused 400 Conejos mezcal and passion fruit" },
         { name: "Rosé Thalassa", price: "$19", desc: "Union mezcal, fresh lime juice, hibiscus tea, rosemary, and sal de gusano" },
-        { name: "Santorini Sunset", price: "$21", desc: "Altos Reposado tequila, fresh lime juice, watermelon juice, and agave" }
+        { name: "Santorini Sunset", price: "$21", desc: "Altos Reposado tequila, fresh lime juice, watermelon juice, and agave", img: "images/santorini-sunset.jpg", thumb: "images/santorini-sunset-thumb.jpg" }
       ]},
       { title: "Beers", items: [
         { name: "Stella Artois", price: "$8", desc: "Lager" },
@@ -250,7 +250,7 @@ window.ASTRA_MENUS = [
 
   /* ------------------------------------------------------- COCKTAILS */
   {
-    id: "cocktails", label: "Cocktails", title: "Cocktails & Beer", pdf: "menus/beverage-menu.pdf",
+    id: "cocktails", label: "Cocktails", title: "Cocktails & Beer", pdf: "menus/beverage-menu.pdf", hero: "images/cocktails-hero.jpg",
     sections: [
       { title: "Crafted Cocktails", items: [
         { name: "Astra to the Moon", price: "$18", desc: "Grey Goose vodka, St-Germain, lemon juice, lychee, and butterfly pea syrup" },
@@ -264,7 +264,7 @@ window.ASTRA_MENUS = [
         { name: "Summer in Mykonos", price: "$18", desc: "Hendrick's gin, Kleos mastiha, lime, and Pathfinder liqueur" },
         { name: "Rosé Thalassa", price: "$19", desc: "Union mezcal, fresh lime juice, hibiscus tea, rosemary, and sal de gusano" },
         { name: "Feelin' Peachy", price: "$18", desc: "Sonrisa Platino, Juliette liqueur, peach purée, topped with Prosecco" },
-        { name: "Santorini Sunset", price: "$21", desc: "Altos Reposado tequila, fresh lime juice, watermelon juice, and agave" },
+        { name: "Santorini Sunset", price: "$21", desc: "Altos Reposado tequila, fresh lime juice, watermelon juice, and agave", img: "images/santorini-sunset.jpg", thumb: "images/santorini-sunset-thumb.jpg" },
         { name: "Rosé Sangria", price: "$16 / $49", desc: "Galea organic rosé sangria", featured: true }
       ]},
       { title: "Beers & Seltzers", items: [
@@ -371,7 +371,7 @@ window.ASTRA_MENUS = [
     sections: [
       { title: "Desserts", items: [
         { name: "Baklava", price: "$16", desc: "Layers of warm dessert: phyllo dough filled with pistachios & vanilla ice cream", img: "images/baklava.jpg", thumb: "images/baklava-thumb.jpg" },
-        { name: "Classic Tiramisu", price: "$14", desc: "Espresso coffee tiramisu" },
+        { name: "Classic Tiramisu", price: "$14", desc: "Espresso coffee tiramisu", img: "images/tiramisu.jpg", thumb: "images/tiramisu-thumb.jpg" },
         { name: "Crème Brûlée", price: "$14", desc: "Classic baked cream aromatized with Madagascar vanilla beans" },
         { name: "Greek Yogurt", price: "$14", desc: "Authentic Greek yogurt with Crete thyme honey" },
         { name: 'Chocolate "Lava" Cake', price: "$14", desc: "Served with vanilla ice cream", img: "images/lava-cake.jpg", thumb: "images/lava-cake-thumb.jpg" },
