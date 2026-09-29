@@ -104,11 +104,11 @@ body.no-scroll { overflow: hidden; }
 .item { display: flex; gap: 12px; padding: 9px 0; break-inside: avoid; }
 .item + .item { border-top: 1px solid var(--line-2); }
 .item-body { flex: 1; min-width: 0; }
-.item-line { display: flex; align-items: baseline; gap: 8px; }
+.item-line { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; } /* a long price drops to its own line instead of breaking the dish name */
 .item-name { font-weight: 600; font-size: 18px; color: var(--navy); }
 .item-sub { font-style: italic; font-weight: 400; font-size: 14.5px; color: var(--gray); }
 .leader { flex: 1; min-width: 14px; border-bottom: 1px dotted var(--line); transform: translateY(-4px); }
-.item-price { font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums; text-align: right; }
+.item-price { font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums; text-align: right; margin-left: auto; }
 .item-desc { margin: 2px 0 0; font-style: italic; color: var(--gray); font-size: 15.5px; line-height: 1.35; }
 sup.raw { font-size: .7em; margin-left: 1px; line-height: 0; }
 
@@ -118,7 +118,7 @@ sup.raw { font-size: .7em; margin-left: 1px; line-height: 0; }
   padding: 12px 14px; margin: 14px 4px 10px; text-align: center; display: block;
 }
 .item.featured .item-line { justify-content: center; flex-wrap: wrap; }
-.item.featured .item-price { white-space: normal; }
+.item.featured .item-price { white-space: normal; margin-left: 0; }
 .item.featured .leader { display: none; }
 .item.featured .item-price::before, .cat.boxed .item-price::before { content: "– "; font-weight: 400; color: var(--gray-2); }
 .item.featured .item-img { margin: 0 auto 8px; }
@@ -149,6 +149,7 @@ sup.raw { font-size: .7em; margin-left: 1px; line-height: 0; }
 .cat.boxed .item { display: block; padding: 10px 0; }
 .cat.boxed .item-line { justify-content: center; flex-wrap: wrap; column-gap: 12px; }
 .cat.boxed .leader { display: none; }
+.cat.boxed .item-price { margin-left: 0; }
 .cat.boxed .item-name {
   font-family: var(--display); font-weight: 600; font-size: 21px; letter-spacing: .08em; text-transform: uppercase;
 }
